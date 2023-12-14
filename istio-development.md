@@ -10,3 +10,8 @@ Solution:
 
 
 2. Building istio : `BUILD_WITH_CONTAINER=1 make docker`
+3. Building only pilot image : `BUILD_WITH_CONTINER=1 make pilot.docker`
+4. Build and push the pilot image : `BUILD_WITH_CONTAINER=1 make  pilot.docker.push`
+
+
+While working with `kind local registry` make sure the hub is `localhost:5001`  but __NOT__ `localhost:5000`.
