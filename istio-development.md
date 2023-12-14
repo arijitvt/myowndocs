@@ -7,3 +7,6 @@ Solution:
  2. Open `config.json`.
  3. Remove this line `	"currentContext": "desktop-linux",`.
  4. Restart the docker desktop.
+
+
+2. Building istio : `BUILD_WITH_CONTAINER=1 make docker`
