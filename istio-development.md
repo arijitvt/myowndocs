@@ -20,3 +20,11 @@
 
 While working with `kind local registry` make sure the hub is `localhost:5001`  but __NOT__ `localhost:5000`.
 
+2. Running integration test against local kind container
+```bash
+prow/integ-suite-kind.sh test.integration.pilot.kube
+```
+
+
+
+
