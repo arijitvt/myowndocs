@@ -25,6 +25,12 @@ While working with `kind local registry` make sure the hub is `localhost:5001`  
 prow/integ-suite-kind.sh test.integration.pilot.kube
 ```
 
+3. Running the unit test.
+  
+   1. Log into docker container. `make shell`  and then copy the `docker-config.json` to  `~/.docker/config.json`
+   2. Run the unit test in the folder by running `go test ` or `go test -v `(for verbose mode).
+   3. Usually some components re independent of  any other component, like `pilot/pkg/server`. We can run the test  by going into the folder and then running `go test` but that won't work for tests that have dependency on other packages. To test them, just use `go test ...`. 
+
 
 
 
