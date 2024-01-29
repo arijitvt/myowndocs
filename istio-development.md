@@ -34,3 +34,20 @@ prow/integ-suite-kind.sh test.integration.pilot.kube
 
 
 
+
+4. Only build pilot and push that to local repo.
+
+   1. Make sure the `HUB` and `TAG` are set. My local system looks like, 
+   
+         ```bash
+         C02G6ADGMD6R@achattopadh5[linux_amd64](add-tests-for-instance)echo $HUB
+         localhost:5000
+         C02G6ADGMD6R@achattopadh5[linux_amd64](add-tests-for-instance)echo $TAG
+         arijit-test
+         ```
+   
+   2. Then run `make shell` to  things from the build container.
+   
+        ```bash
+        BUILD_ALL=false DOCKER_TARGETS=docker.pilot make dockerx.pushx
+        ```
