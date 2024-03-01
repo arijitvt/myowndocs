@@ -51,3 +51,15 @@ prow/integ-suite-kind.sh test.integration.pilot.kube
         ```bash
         BUILD_ALL=false DOCKER_TARGETS=docker.pilot make dockerx.pushx
         ```
+
+5. Solving issue with `kind-registry`
+      ```bash
+      # first stop the registry container
+      docker stop kind-registry
+      
+      # Delete the container
+      docker rm  kind-registry
+      ```
+      Then run the [setup script]https://kind.sigs.k8s.io/docs/user/local-registry/0.
+
+
